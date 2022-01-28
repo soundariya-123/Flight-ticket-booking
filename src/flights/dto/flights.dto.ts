@@ -1,4 +1,5 @@
 import { IsEnum, IsNotEmpty, IsNumber, IsString } from "class-validator";
+import { Users } from "src/users/users.entity";
 /**
  * Flight DTO File
  * @class FlightsDTO
@@ -60,7 +61,7 @@ export class FlightsDTO{
      * @field dateOfFlay
      */
     @IsNotEmpty()
-    dateOfFly:string;
+    dateOfFly:Date;
     
     /**
      * @field timeOfArrival
@@ -90,4 +91,9 @@ export class FlightsDTO{
     @IsNotEmpty()
     @IsNumber()
     ticket_price:number;
+    /**
+     * @field users
+     * @type Users
+     */
+    users:Users;
 }
