@@ -1,4 +1,5 @@
 import { Body, Controller, Param, Patch, Post } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { UserbookingDTO } from './dto/user-booking.dto';
 import { UserBookingService } from './user-booking.service';
 
@@ -6,6 +7,7 @@ import { UserBookingService } from './user-booking.service';
  * UserBookingController -- Controllers are responsible for handling incoming requests and returning responses.
  * @author soundariya
  */
+@ApiTags('user-booking')
 @Controller('user-booking')
 export class UserBookingController {
 
